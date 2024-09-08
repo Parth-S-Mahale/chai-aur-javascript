@@ -103,7 +103,7 @@ buttons.forEach(function (button){
     });
 });
 ```
-
+# OUTPUT :
 ![alt text](image.png)
 
 # project 2
