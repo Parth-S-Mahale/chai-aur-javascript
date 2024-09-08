@@ -106,7 +106,7 @@ buttons.forEach(function (button){
 # OUTPUT :
 ![alt text](image.png)
 
-# project 2
+## project 2
 
 ### HTML
 ```HTML
