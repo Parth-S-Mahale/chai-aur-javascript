@@ -312,3 +312,5 @@ setInterval(function () {
     clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
 ```
+# OUTPUT :
+<video controls src="Screen Recording 2024-09-09 113454.mp4" title="Title"></video>
