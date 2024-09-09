@@ -313,4 +313,4 @@ setInterval(function () {
 }, 1000);
 ```
 # OUTPUT :
-<video controls src="Screen Recording 2024-09-09 113454.mp4" title="Title"></video>
+![alt text](image-2.png)
