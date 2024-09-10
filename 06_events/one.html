@@ -30,35 +30,58 @@
         </ul>
     </div>
     <script>
-        // document.getElementById('owl').onclick =(function(){
-        //     alert("Owl clicked!")
-        // })
 
-        // attachEvent()
-        // jQuery - on
+        // ---------------------------------Creating an Event In Javascript-----------------------------------
+        document.getElementById('owl').onclick =(function(){
+            alert("Owl clicked!")
+        })
 
-        // type, timestamp, defaultPrevented
-        // target, toElement, srcElement, currentTarget
-        // clientX, clientY, screenX, screenY
-        // altkey, ctrlkey, shiftkey, keyCode
+        /* 
+            * attachEvent()
+            * jQuery - on
+        */ 
 
-        // document.getElementById('images').addEventListener('click', function(e){
-        //     // alert("Owl clicked!")
-        //     console.log("clicked inside the ul");
-        // }, false)
+        /*  
+            * type, timestamp, defaultPrevented
+            * target, toElement, srcElement, currentTarget
+            * clientX, clientY, screenX, screenY
+            * altkey, ctrlkey, shiftkey, keyCode
+        */ 
+        
+        // -----------------------Type of Event Propagation: Event Bubbling-----------------------------------
+        document.getElementById('images').addEventListener('click', function(e){ 
+            // alert("Owl clicked!")
+            console.log("clicked inside the ul");
+        }, false)
 
-        // document.getElementById('owl').addEventListener('click', function(e){
-        //     // alert("Owl clicked!")
-        //     console.log("Owl clicked");
-        //     e.stopPropagation()
-        // }, false)
+        
+        document.getElementById('owl').addEventListener('click', function(e){
+            // alert("Owl clicked!")
+            console.log("Owl clicked");
+            e.stopPropagation()
+        }, false)
 
-        // document.getElementById('google').addEventListener('click', function(e){
-        //     e.preventDefault();
-        //     e.stopPropagation();
-        //     console.log("google clicked!");
-        // }, false)
+        // -----------------------Type of Event Propagation: Event Capturing-----------------------------------
+        document.getElementById('images').addEventListener('click', function(e){ 
+            // alert("Owl clicked!")
+            console.log("clicked inside the ul");
+        }, true)
 
+        
+        document.getElementById('owl').addEventListener('click', function(e){
+            // alert("Owl clicked!")
+            console.log("Owl clicked");
+            e.stopPropagation()
+        }, true)
+
+        // -----------------------Stopping an Event Propagation In Javascript----------------------------------
+        document.getElementById('google').addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("google clicked!");
+        }, false)
+
+        // -----------------------Removing images using Event's Concept----------------------------------
         document.querySelector('#images').addEventListener('click', function(e){
             console.log(e.target.tagName);
             if(e.target.tagName === 'IMG'){
@@ -66,9 +89,8 @@
                 let removeIt = e.target.parentNode
                 removeIt.remove();
             }
-            // removeIt.parentNode.removeChild(removeIt)
+            // removeIt.parentNode.removeChild(removeIt) // Handling Events Using Parent-Child Concept
         })
     </script>
 </body>
-
 </html>
