@@ -1,4 +1,6 @@
-# Events In Javascript:
+# Events In Javascript :
+
+<img src="NOTES/Screenshot 2024-09-10 122729.png" alt="Slide 1" class="center"/>
 
 ## HTML and Javascript :
 ``` HTML and Javascript
@@ -100,12 +102,18 @@
 </html>
 ```
 
-<img src="NOTES/Screenshot 2024-09-10 122729.png" alt="Slide 1" class="center"/>
+## Types of Events In Javascript :
 
-### Types of Events In Javascript
-
+### Event Bubbling :
+#
 <img src="NOTES/Screenshot 2024-09-10 122736.png" alt="Slide 2" class="center"/>
+
+### Event Capturing :
+#
 <img src="NOTES/Screenshot 2024-09-10 122742.png" alt="Slide 3" class="center"/>
+
+### Stopping an Event In Javascript  :
+#
 <img src="NOTES/Screenshot 2024-09-10 122824.png" alt="Slide 4" class="center"/>
 
 .center {
