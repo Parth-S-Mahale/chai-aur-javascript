@@ -4,6 +4,39 @@
 - collection of properties and methods
 - Example :- toUpperCase() , toLowerCase() , etc.
 
+### JAVASCRIPT :
+```js
+function multiplyBy5(num){
+    return num*5;
+}
+
+multiplyBy5.power = 2
+
+console.log(multiplyBy5(5));
+console.log(multiplyBy5.power);
+console.log(multiplyBy5.prototype);
+
+function createUser(username, price){
+    this.username = username
+    this.price = price
+}
+
+createUser.prototype.increment = function(){
+   this.price++;
+}
+
+createUser.prototype.printMe = function(){
+    console.log(`price is ${this.price}`);
+}
+
+const chai = new createUser("chai", 25)
+const tea = new createUser("tea", 250)
+
+chai.printMe()
+```
+# Object relationship : 
+![alt text](image.png)
+
 ## Question: why do we use Object Oriented Programming In Javascript ?
 ### Answer : 
 In JavaScript, Object-Oriented Programming (OOP) is used for many of the same reasons as in other programming languages but with some specific benefits tailored to JavaScript's unique environment:
@@ -68,6 +101,83 @@ console.log(userTwo);
 ```
 
 - Prototypes
+### JAVASCRIPT:
+```js
+// let myName = "hitesh     "
+
+// console.log(myName.trim().length)
+// console.log(myName.truelength);
+
+let myHeros = ["thor", "spiderman"]
+
+let heroPower = {
+    thor: "hammer",
+    spiderman: "sling",
+
+    getSpiderPower: function(){
+        console.log(`spidy power is ${this.spiderman}`);
+    }
+}
+
+Object.prototype.hitesh = function(){
+    console.log(`hitesh is present in all objects`);
+}
+
+Array.prototype.heyHitesh = function(){
+    console.log(`Hitesh says hello`);
+}
+
+heroPower.hitesh()
+myHeros.hitesh();
+
+myHeros.heyHitesh();
+// heroPower.heyHitesh(); // info only added for an Array not for an Object
+
+// Inheritance
+
+const User = {
+    name: "chai",
+    email: "chai@google.com"
+}
+
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport = {
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+    __proto__: TeachingSupport
+}
+
+Teacher.__proto__ = User
+
+// modern syntax
+
+Object.setPrototypeOf(TeachingSupport, Teacher)
+```
+### Task 2 (Counting the length of a string making a function and using it for counting the length of the string) :
+
+# Code (Javascript) :
+```js
+let anotherUsername = "ChaiAurCode     "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`);
+    // console.log(`${this.name}`); // deprecated property
+    console.log(`True length is: ${this.trim().length}`);
+}
+
+anotherUsername.trueLength()
+"hitesh".trueLength()
+"iceTea".trueLength()
+```
+### OUTPUT :
+![alt text](image-1.png)
 - Classes
 - Instances (new, this)
 
