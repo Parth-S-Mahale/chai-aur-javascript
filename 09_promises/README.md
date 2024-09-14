@@ -35,7 +35,11 @@ const promiseThree = new Promise(function (resolve, reject) {
 promiseThree.then(function (user) {
     console.log(user);
 })
+```
+# Promises using then(), catch() and finally()  :
 
+### JAVASCRIPT :
+```js
 const promiseFour = new Promise(function (resolve, reject) {
     setTimeout(function () {
         let error = true
@@ -59,7 +63,13 @@ promiseFour
         console.log(error);
     }).finally(() => console.log("The promise is either resolved or rejected")
     )
+```
 
+# Promises using Async & await functions :
+
+### JAVASCRIPT :
+
+``` js
 const promiseFive = new Promise(function (resolve, reject) {
     setTimeout(function () {
         let error = true
@@ -82,19 +92,28 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive()
+```
+# Promises using Async & await functions with Fetch API :
 
-// async function getAllUsers() {
-//     try {
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-//         const data = await response.json()
-//         console.log(data);
-//     } catch (error) {
-//         console.log("E: ", error); 
-//     }
-// }
+### JAVASCRIPT :
+```js
 
-// getAllUsers();
+async function getAllUsers() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await response.json()
+        console.log(data);
+    } catch (error) {
+        console.log("E: ", error); 
+    }
+}
 
+getAllUsers();
+```
+# Promises using Fetch API :
+
+### JAVASCRIPT :
+```js
 fetch('https://jsonplaceholder.typicode.com/users')
 .then((response) => {
     return response.json()
