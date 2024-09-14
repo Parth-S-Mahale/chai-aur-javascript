@@ -1,6 +1,6 @@
 # Object Oriented Programming In Javascript :
 
-## Object :
+## 1. Object :
 - collection of properties and methods
 - Example :- toUpperCase() , toLowerCase() , etc.
 
@@ -34,7 +34,7 @@ const tea = new createUser("tea", 250)
 
 chai.printMe()
 ```
-# Object relationship : 
+## 2. Object relationship : 
 ![alt text](image.png)
 
 ## Question: why do we use Object Oriented Programming In Javascript ?
@@ -76,7 +76,7 @@ const userOne = User("hitesh", 12, true)
 const userTwo = User("ChaiAurCode", 11, false)
 console.log(userOne); // userTwo info overrides --> userOne info, that's why 'new' keyword is used to stop the overriding of the info one object due to another. 
 ```
-## parts of OOP :
+## 3. parts of OOP :
 Object literal
 
 - Constructor function
@@ -223,8 +223,32 @@ console.log(this)
 
 
 
-## 4 pillars
+## 4. pillars
 - Abstraction
 - Encapsulation
 - Inheritance
 - Polymorphism
+
+## 5. call() function :
+
+### JAVASCRIPT :
+``` js
+function setUsername(username){
+    // complex DB calls
+    this.username = username;
+    console.log("Called!");
+}
+
+function creatUser(username, email, password){
+    setUsername.call(this, username)
+
+    this.email = email
+    this.password = password    
+}
+
+const user = new creatUser("chai", "chai@fb.com", "123");
+console.log(user);
+```
+
+### OUTPUT :
+![alt text](image-2.png)
